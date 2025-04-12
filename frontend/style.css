@@ -1,0 +1,94 @@
+/* frontend/style.css */
+body {
+    background-color: transparent; /* Required for OBS overlay */
+    font-family: sans-serif;
+    color: white;
+    margin: 0;
+    padding: 10px;
+    overflow: hidden; /* Hide scrollbars */
+}
+
+#spotify-widget {
+    display: flex;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    border-radius: 8px;
+    padding: 10px;
+    max-width: 400px; /* Adjust as needed */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+.album-art-container {
+    flex-shrink: 0;
+    margin-right: 10px;
+}
+
+#album-art {
+    width: 64px; /* Adjust size as needed */
+    height: 64px;
+    border-radius: 4px;
+    object-fit: cover;
+}
+
+.track-info {
+    flex-grow: 1;
+    min-width: 0; /* Allow text to shrink */
+}
+
+#track-name {
+    font-size: 1.1em;
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; /* Add ... for long names */
+}
+
+#artist-name,
+#album-name {
+    font-size: 0.9em;
+    color: #ccc;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Optional Progress Bar Styling */
+/*
+.progress-bar-container {
+    height: 4px;
+    background-color: #555;
+    border-radius: 2px;
+    margin-top: 5px;
+    overflow: hidden;
+}
+
+#progress-bar {
+    height: 100%;
+    width: 0%;
+    background-color: #1DB954; 
+    transition: width 0.5s linear;
+}
+*/
+
+.hidden {
+    display: none !important;
+}
+
+#auth-message,
+#no-song-message {
+    background-color: rgba(100, 0, 0, 0.8);
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 1.1em;
+}
+
+#auth-message a {
+    color: #1DB954; /* Spotify green */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#auth-message a:hover {
+    text-decoration: underline;
+} 

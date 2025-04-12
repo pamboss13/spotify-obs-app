@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify Now Playing</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="spotify-widget" class="hidden">
+        <div class="album-art-container">
+            <img id="album-art" src="" alt="Album Art">
+        </div>
+        <div class="track-info">
+            <div id="track-name">Track Name</div>
+            <div id="artist-name">Artist Name</div>
+            <div id="album-name">Album Name</div>
+            <!-- Optional Progress Bar -->
+            <!-- <div class="progress-bar-container">
+                <div id="progress-bar"></div>
+            </div> -->
+        </div>
+    </div>
+    <div id="auth-message" class="hidden">
+        Authentication needed. Please <a href="/login">login with Spotify</a>.
+    </div>
+     <div id="no-song-message" class="hidden">
+        No song currently playing on Spotify.
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
